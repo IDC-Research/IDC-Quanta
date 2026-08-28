@@ -2,7 +2,7 @@
 
 Read this file before the first QDA query on any market you have not queried yet this session, and whenever a user asks "what data do you have", "what markets does IDC cover", or "Tracker or Spending Guide?". It maps IDC's supply-side and demand-side data products to their library IDs so you pick the right library before calling the QDA chain, instead of discovering blind.
 
-Library IDs below were verified against the live IDC connector on 2026-06-13 via `qda_qda_list_libraries` (89 libraries returned). IDs are stable but can change; call `qda_qda_list_libraries` once per session and treat its output as authoritative if it disagrees with this file.
+Library IDs below are a reference snapshot. IDs are stable but the catalog grows over time; call `qda_qda_list_libraries` once per session and treat its output as authoritative if it disagrees with this file.
 
 ## How IDC data is organized
 
