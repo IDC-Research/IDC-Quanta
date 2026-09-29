@@ -1,73 +1,85 @@
-# IDC Quanta Skill
+# IDC Quanta
 
-**Version:** 1.0
-**Distributed by:** IDC
-**Invocation:** `/idc-quanta` or any natural-language IT-market question
+IDC Quanta brings IDC market intelligence and technology sourcing into Claude. It answers IT market questions with live data from IDC Trackers, IDC Spending Guides, and IDC research documents, and it guides technology buyers from a need to a purchase decision using IDC vendor ratings and commercial data. It cites every figure back to its IDC source and does not answer these questions from Claude's general knowledge.
 
-## Overview
+IDC Quanta is published by IDC (International Data Corporation). An active IDC subscription is required to use it.
 
-The IDC Quanta Skill is a packaged set of analyst workflows that runs inside Claude. It gives IDC clients direct access to IDC research documents, Trackers, Spending Guides, MarketScape studies, and other subscribed content, delivered as structured, source-cited answers within the chat interface.
+## Packages
 
-The Skill sits on top of the IDC MCP connector and enforces the navigation, attribution, and brand-voice rules that make every response auditable and consistent with how IDC analysts would answer the same question.
+IDC offers this plugin in three packages. Your IDC subscription decides which one you have, and the plugin adjusts automatically.
 
-## What it does
+- **IDC Quanta:** market intelligence
+- **IDC Tech Leader:** technology sourcing
+- **Both:** market intelligence and technology sourcing
 
-The Skill routes each request to one of twenty pre-wired workflows calibrated by IDC analysts. Users do not need to select a workflow. The Skill's dispatcher picks the correct route automatically based on the question. Covered workflows include:
+If you ask for something outside your package, the plugin tells you it isn't included and does not answer from other sources.
 
-Market share analysis, market sizing, TAM and forecasts, IT and vertical spending outlook, vendor evaluation, MarketScape interpretation, competitive strategy and competitive share, battlecards, deal strategy, peer-spend benchmarking, M&A target identification, emerging-technology assessment, digital transformation advisory, executive intelligence, signal scanning, strategy recommendations, market opportunity sizing, and general research Q&A.
+## What it includes
 
-Every response includes inline citations, source dates, and a link back to IDC Home for verification.
+- **IDC Quanta skill.** Tells Claude when to use IDC data, how to choose the right IDC source, how to run a sourcing engagement step by step, and how to format answers with a source line, a confidence rating, inline citations, a Sources list, and the IDC disclaimer.
+- **IDC connector.** A remote MCP server at `https://mcp.idc.com/mcp` that gives Claude search and query access to IDC data, research, and Tech Leader vendor ratings.
 
-## Who it is for
+The plugin works in Claude chat, Cowork, and Claude Code.
 
-IDC clients with an active subscription and the relevant entitlement. Typical users include analysts, strategy and corporate development teams, sales and go-to-market functions, product marketing, and executive leadership who need IDC-grounded intelligence inside their AI workflow.
+## What you can ask: market intelligence
 
-## Prerequisites
+- **Market share and rankings:** "Who leads the cloud IaaS market?" or "How has vendor share changed over the last two years?"
+- **Market size and forecasts:** "How big is the security software market?" or "What is the five-year CAGR for AI platforms?"
+- **IT spending by industry:** "How much is banking spending on AI?"
+- **Vendor positioning:** IDC MarketScape Leaders and how vendors are positioned in a market
+- **Competitive intelligence:** competitor strategy, battlecards, early market signals, and deal strategy
+- **Emerging technology:** adoption timing, maturity, business impact, and risk
+- **Executive and M&A briefings:** market context for boards, investment cases, and acquisition targets
+- **IDC research:** "What does IDC say about sovereign cloud?" and citation-ready analyst quotes
 
-The Skill requires Claude Enterprise Edition or Claude Teams Edition. It is not available on Claude Pro or Free for data-security reasons. Users must also have an active IDC subscription with the relevant entitlement, and the IDC MCP connector must be enabled in their Claude environment.
+## What you can ask: technology sourcing
 
-## Installation
+For a purchase you're making, IDC Quanta works through the decision with you in stages:
 
-The recommended deployment path is the **IDC Quanta Plugin in Claude**, which installs the Skill, the MCP connector, navigation rules, and brand-voice logic in a single organization-wide step. IT administrators can install the Plugin through Claude's Organisation settings and GitHub sync, which also keeps the Skill updated automatically.
+1. Resolve your need to an IDC market
+2. Define and rank your requirements
+3. Build a scored vendor shortlist
+4. Compare finalists side by side
+5. Build an RFP with a vendor response template
+6. Prepare for negotiation
 
-A backup path is available for environments where the Plugin is not yet supported. In that case, the Custom MCP Connector is added at the organization level and each end user uploads this Skill package manually through Customize → Manage Skills → Add → Upload a Skill. This path does not receive automatic updates.
+Try "We're replacing our endpoint security vendor. Who should we consider?" or "Build an RFP for our shortlist."
 
-Full installation instructions for both paths are maintained at `idc.com/developer`.
+The RFP comes as a Word document and an Excel response template. The negotiation guide comes as a PowerPoint deck or a PDF. Claude builds these files in your session only when you ask for them. Neither file carries IDC branding. File creation uses Claude's built-in document tools in Claude chat and Cowork. In Claude Code, it depends on the document tools available in your setup.
 
-## Usage
+Ask in plain language. You don't need to mention IDC or use a command, though you can also start the skill directly by typing `/` and choosing IDC Quanta. In Claude Code the command is `/idc-quanta:idc-quanta`. Run it on its own to see a list of what you can ask.
 
-Once installed and authenticated, users interact with the Skill by asking any IT-market or technology question in natural language. The Skill triggers automatically. Users may also invoke it explicitly by typing `/idc-quanta`.
+## Setup
 
-The Skill returns a structured response containing an IDC Quanta header, a headline finding, an evidence block with cited figures, and an implications section, followed by the standard IDC disclaimer.
+1. Install the IDC Quanta plugin from the Claude directory.
+2. Open the plugin's **Connectors** tab and connect the IDC connector.
+3. Sign in with your IDC account when prompted. On Team and Enterprise plans, an Owner may need to add the connector for your organization first.
+4. Ask a market question to confirm the connection.
 
-## Scope and limitations
+If the connector isn't connected, IDC Quanta tells you it can't reach IDC and asks you to connect it.
 
-The Skill is designed for IT- and technology-market questions grounded in IDC data. It is not intended for tasks unrelated to market intelligence, such as document generation from local files, coding, or general web research. When a question falls outside IDC's coverage, the Skill will indicate this rather than answer from general knowledge.
+## How it works and what data it sends
 
-Answers are only as current as the underlying IDC data. Users should confirm the source date shown in the citation before quoting figures in external deliverables.
+- When you ask a question, Claude sends search terms and query parameters based on your question (for example, market names, vendor names, industries, regions, time periods, and the requirements you state for a purchase) to the IDC connector at `https://mcp.idc.com/mcp`.
+- The connector returns IDC data and research that your IDC subscription entitles you to see. Claude uses those results to write the answer.
+- The plugin contacts no service other than the IDC connector.
+- The plugin contains only instructions and a connector reference. It runs no local code, scripts, or hooks, downloads nothing at install time, and stores nothing on your device.
+- Files you share in the conversation, such as an RFI, are read by Claude in your session and are never sent to the IDC connector. RFP and negotiation files are also created in your session.
+- The plugin does not read credentials or files from your computer. You sign in to IDC through the connector's own sign-in flow.
 
-## Package contents
+## Privacy
 
-```
-IDC_Skill_v1.0/
-├── README.md
-├── SKILL.md
-└── references/
-    ├── brand-voice.md
-    ├── capabilities.md
-    ├── disclaimer.md
-    ├── idc-data-landscape.md
-    ├── mcp-playbook.md
-    ├── rules.md
-    └── routes/          (20 workflow reference files)
-```
+IDC handles data sent to the IDC connector under the [IDC Privacy Policy](https://www.idc.com/about/privacy/).
+
+## Terms of use
+
+IDC Quanta is intended for authorized IDC subscribers. Answers include IDC content that is subject to your IDC subscription agreement. Do not redistribute or publish IDC content in whole or in part without prior written authorization from IDC. To ask what you can share or to request approval, contact IDC Permissions at permissions@idc.com. Answers are generated by AI and may contain errors, so confirm important figures before relying on them. Answers are not professional advice.
 
 ## Support
 
-**IDC Support** handles activation, entitlements, licensing, and product-level technical questions for IDC Quanta and related offerings.
-Email: idc_support@idc.com
-Hours: Monday to Friday, 8:30 AM to 5:00 PM ET
+- **Login issues, technical errors, or connector problems:** idc_support@idc.com
+- **Subscriptions, billing, account management, or renewals:** customerservice@idc.com
 
-## Version history
+## License
 
-**v1.0** — Initial customer release.
+See the LICENSE file in this plugin folder.
