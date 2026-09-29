@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "idc": {
+      "type": "http",
+      "url": "https://mcp.idc.com/mcp"
+    }
+  }
+}
