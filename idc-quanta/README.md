@@ -47,6 +47,8 @@ Try "We're replacing our endpoint security vendor. Who should we consider?" or "
 
 The RFP comes as a Word document and an Excel response template. The negotiation guide comes as a PowerPoint deck or a PDF. Claude builds these files in your session only when you ask for them. Neither file carries IDC branding. File creation uses Claude's built-in document tools in Claude chat and Cowork. In Claude Code, it depends on the document tools available in your setup.
 
+When a sourcing question involves your own negotiation, the answer also includes a link to IDC's Deal Review (https://my.idc.com/idcquanta/deal-review/), where an IDC analyst can review your specific quote or proposal. The plugin does not submit anything to Deal Review. You open the link yourself if you want that service. Deal Review is available only with the IDC Tech Leader package.
+
 Ask in plain language. You don't need to mention IDC or use a command, though you can also start the skill directly by typing `/` and choosing IDC Quanta. In Claude Code the command is `/idc-quanta:idc-quanta`. Run it on its own to see a list of what you can ask.
 
 ## Setup
