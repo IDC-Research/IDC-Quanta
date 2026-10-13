@@ -1,7 +1,7 @@
 {
   "name": "idc-quanta",
   "displayName": "IDC Quanta",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "IDC market intelligence and technology sourcing in Claude, grounded in live IDC data with cited sources. Ask about market size and forecasts, vendor share and rankings, IT spending, MarketScape positioning and competitive strategy, or get help choosing a technology: requirements, a scored vendor shortlist, an RFP, and negotiation preparation. Requires an IDC subscription.",
   "author": {
     "name": "IDC",
