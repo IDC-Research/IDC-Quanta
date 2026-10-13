@@ -1,6 +1,6 @@
 # Negotiation guide (PowerPoint, or PDF to forward)
 
-Read with `references/sourcing/exports/common.md`, whose mandatory elements and generation guardrails all apply. Built on explicit go-ahead only. This is Path 1, the self-serve guide — the path the skill builds. Paths 2 and 3 are in `references/sourcing/sourcing-artifacts.md` and produce no document.
+Read with `references/sourcing/exports/common.md`, whose mandatory elements and generation guardrails all apply. Built on explicit request only, after the prerequisites check in `references/sourcing/sourcing-core.md`. This is the self-serve guide, the only negotiation file the skill builds. A review of vendor responses and an analyst deal review produce no document (`sourcing-core.md`, Phases 5 and 6).
 
 Vendor- and persona-specific.
 
@@ -14,7 +14,7 @@ Every guide follows this structure. No WHY / WHAT / WHO / HOW framing, no resear
 2. **Understand the vendor's position**
    - *Vendor strengths* — core product strength, commercial or ecosystem strength, market position.
    - *Vendor weaknesses* — product gaps, cost-transparency concerns, roadmap or delivery concerns. This is where discount posture and its rationale, volume sensitivity and its inflection points, and the stability/funding read belong.
-   - *List pricing* to anchor against, with **each price date inline beside its own figure** — flag any price over roughly 16 months old as stale before a buyer anchors on it. Where a product carries several price entries on different units, name the unit with each figure.
+   - *List pricing* to anchor against, with **each price date inline beside its own figure** — flag any price over 16 months old as stale before a buyer anchors on it. Where a product carries several price entries on different units, name the unit with each figure.
 3. **Execute the negotiation**
    - *Levers* — timing, multi-year commitment, competition, reference-customer value.
    - *Proven tactics* — trial terms, bundling, information control.
@@ -29,6 +29,10 @@ Wrap the three sections in: disclaimer and permissions statement; title, vendor 
 A bullet names the vendor's actual fiscal year-end, their real discount range, a named product gap — not a prompt generic enough to apply to any vendor. Where the source data has nothing for a bullet, say so plainly ("Vendor's typical discount posture: not available for this vendor") rather than filling it with language dressed up to sound specific. A negotiation platitude ("ask for a discount") presented as a named lever without vendor-specific reasoning behind it fails this rule the same way a fabricated fact would.
 
 ## What to ask the buyer, and what not to
+
+Never build any part of this guide on the buyer's own quote, and reproduce nothing from their document in it: the guide rests on IDC's published data, and a verdict on their specific deal is the Sourcing Advisory analyst's work. Where they have shared a quote, order form or contract, it may inform which topics the guide covers and nothing more — no line items, totals, dates or terms carried across, and no target price or discount to hold out for anywhere in the deck.
+
+The guide carries the Deal Review pointer verbatim (`references/deal-review.md`), on its own slide or in the closing section. This is a buyer-facing internal deck, so the pointer belongs in it.
 
 Ask the buyer directly for what only they know: their own budget ceiling, their current contract's renewal or end date, other vendors they're seriously considering as alternatives, and who specifically will be in the room. Do not ask the buyer for anything about the vendor's own business that IDC's data should supply instead — a vendor's fiscal year-end, typical discount posture, or funding stability. Pull that from the tools.
 

@@ -5,32 +5,31 @@ full audit trail of the engagement, produced on request and never unprompted.
 
 ## When to produce it
 
-Produce it when the tech leader asks how the scoring, ranking, selection or exclusions worked. The stage 3
-note invites the exact phrase — `Details on Scoring Methodology` — but **any free-form version of the
-question triggers this file**: "how did you score these", "why is X ranked above Y", "how was this
+Produce it when the tech leader asks how the scoring, ranking, selection or exclusions worked. **Any
+free-form version of the question triggers this file**: "how did you score these", "why is X ranked above Y", "how was this
 calculated", "what was the methodology", "show me your working", "why did Z get excluded", "on what basis".
-Do not make them use the magic phrase.
+Also on "Details on Scoring Methodology".
 
 **Never produce it unprompted.** It is a long section and it is not part of a normal sourcing response, so
-it goes out only when asked. Nothing about it changes the ledger: it is an explanation of the engagement,
-not a seventh stage. Keep the stages as they stand and do not mark anything Completed because the brief
-was produced.
+it goes out only when asked. It is an explanation of the engagement, not a seventh phase.
 
 **It is a read-back of the engagement, not a fresh analysis.** Every figure in it comes from what already
 ran — the same market, the same requirement set, the same scores and the same exclusions the tech leader
 has already seen. Do not re-score, do not re-resolve the market, and do not produce different numbers than
-the shortlist showed; if the two disagree, the shortlist is what stands and the discrepancy is the finding.
-Where a section has nothing to report because that stage has not run, say so in one line rather than
+the shortlist showed. Where reading the engagement back surfaces an inconsistency in what already ran — a
+score that does not match the rank it was given, an exclusion attributed to a requirement that was never
+passed to the engine — the shortlist the tech leader saw is what stands, and the inconsistency is itself the
+finding: state it plainly rather than quietly presenting corrected numbers.
+Where a section has nothing to report because that work has not run, say so in one line rather than
 omitting the section.
 
 ## Format
 
-A `##` headline, then the six sections below under `###` headings, in this order, then **Sources**, then
-the disclaimer. **No Recommendations footer** — the brief explains a result rather than recommending one,
-and the engagement's Recommendations stands as last rendered. The sourcing header applies, and so does the ledger — it opens the body as it does on
-every response the route produces, with the stages exactly as they stand (the brief changes none of them). Keep it factual and tabular where the content is a list; this is an audit trail, not an essay,
+The sourcing header, a `##` headline, then the six sections below under `###` headings, in this order, then
+**Sources**, then the disclaimer. No progress line and no closing line: the brief explains a result rather
+than advancing the engagement, and `sourcing-core.md` names it as the one exception to its body shape. Keep it factual and tabular where the content is a list; this is an audit trail, not an essay,
 so resist narrative padding. Citations follow Rule 3 and Rule 3a exactly as they do everywhere else: the
-market definition to the Vendor RFI entry (Class 3, unlinked), tiers and narrative to the MarketScape (Class 1, unlinked), the engine scores, coverage
+market definition to the Vendor RFI entry (Class 3, unlinked), tiers and narrative to the MarketScape (Class 1), the engine scores, coverage
 denominators and requirement rows to the Vendor RFI entry (Class 3, unlinked), and pricing or discount
 posture to the Commercial Dataset entry (Class 3, unlinked).
 
@@ -38,29 +37,25 @@ posture to the Commercial Dataset entry (Class 3, unlinked).
 
 ### 1. The market chosen, and the markets passed over
 
-The market as confirmed, named as stage 1 named it from the market record with the segment scope intact,
+The market as used, named as phase 1 named it, with the segment scope intact,
 its one-sentence definition cited, and its edition year and company-size cut, since the whole ranking
 rests on it.
 
-Then every candidate the search surfaced and did not win, up to five, one line each on why, in the same
-order stage 1 carried them, labelled by kind: declined by the tech leader on the intake card, or ruled out
-by you.
+Then every candidate considered and not used, one line each on why, labelled by kind: declined by the
+tech leader, or ruled out by you. Say what the sanity check showed where it changed the market call.
 
 ### 2. The requirements, with their priorities
 
-Every requirement in the engagement, in a table: the requirement as the tech leader stated it, its type
-(functional / technical / company), its priority as they gave it (critical / non-critical, and the engine
-priority it mapped to), its origin (typed on the intake card, stated in conversation, extracted from an
-upload, or your own inference, labelled as such), and whether it was scored.
-
-Where a requirement mapped to a catalog row, its type came from that row's own classification rather than from
-inference — note that once, since it is the difference between IDC's classification and a judgement call.
+Every requirement in the engagement, in a table: the requirement as the tech leader stated it, the
+weight it went to the engine at (and whether it was a hard filter because they called it mandatory), its
+origin (stated in conversation, extracted from an upload, or your suggestion, labelled as such), and
+whether it was scored.
 
 **Requirements with no IDC catalog match are listed here explicitly, not quietly dropped.** Mark each one
-"not in IDC's requirement catalog — not scored" and say in one line what that means: it shaped the RFP and
+"not graded by IDC" and say in one line what that means: it shaped the RFP and
 the read, but it could not shape the ranking. A tech leader auditing a shortlist needs to know which of
-their criteria the engine never saw. Where the intake card was skipped and the scoring ran on the market's
-most heavily weighted catalog criteria, say so and list those criteria as assumed rather than stated.
+their criteria the engine never saw. Where the tech leader gave no requirements and the scoring ran on criteria from the market's catalog,
+say so and list those criteria as assumed rather than stated.
 
 ### 3. The shortlist, with scores
 
@@ -71,8 +66,7 @@ Every vendor presented, in rank order: rank, vendor, product, engine score, Mark
   ranking.
 - Scores are **requirement-relative**: they measure fit against this tech leader's criteria, not overall
   product quality, which is why the capabilities-covered figure sits beside each one.
-- Ties: the engine orders equal scores alphabetically, which carries no meaning, so tied blocks were
-  re-ordered by capabilities covered, descending, before any cut. Name the tied blocks and where the cut fell.
+- Ties: tied scores were ordered by capabilities covered, descending, before any cut. Name the tied blocks and where the cut fell.
 - A **partial** score means partial capability; an **absence** from the returned set means the vendor
   wholly failed a selected requirement. These are different findings and are reported differently.
 - Any override the tech leader made — a vendor promoted or dropped against its computed score — with their
@@ -86,9 +80,10 @@ separate, because they rest on different evidence:
 - **Engine-filtered** — the vendor wholly failed a requirement passed to the scoring engine. Name the
   requirement. Where the attribution is uncertain, say so, and note that re-running the scoring with the
   suspect requirement alone settles it in one call.
-- **Applied after scoring** — a must-NOT-have the catalog does not carry, enforced by you against the
-  rated elements and the vendor narrative. Name the exclusion, name the vendors, and say plainly that this
-  cut rests on IDC's rated elements and narrative rather than on a deterministic filter.
+- **Applied after scoring** — a must-not-have the catalog does not carry, enforced by you against the
+  capabilities IDC rates in this market and the vendor narrative. Name the exclusion, name the vendors, and
+  say plainly that this cut rests on the capabilities IDC rates and on its narrative rather than on a
+  deterministic filter.
 - **Excluded at the tech leader's direction** — a vendor they ruled out. Attributed to them, never
   presented as IDC's judgement.
 

@@ -20,12 +20,14 @@ Several candidates commonly share the newest period, differing only by the subsc
 
 ## Citation: capture the link at the step that has it
 
-A structured-data response returns figures and little else. It does not carry a link, and it may not even name the product it came from, so carry the library's identity forward from the step where you chose it, then make one catalogue lookup for that library to capture its live link for the citation.
+Rule 3 defines the two Sources forms. This section is about where each field comes from, because a citation cannot be assembled from the step that returns the figures.
 
-A research document carries its link in the search result that surfaced it. Capture it there, because retrieving the document's full body returns content without the link or the title. Carry both forward from the search step, and never rebuild a title from a document's body.
+A structured-data response returns figures and little else. It does not carry a link, a product name or a date, so carry the library's identity forward from the step where you chose it, then make one data-product **search** for that library — the keyword search over data products, not the plain library listing, which returns names and ids only. That search result is what carries everything a data-product citation needs: the `library_name` to cite it by, the `library_url` to link it, and the `published_date` for its year. Make it before writing the Sources section, not after. One call covers both jobs when the same search confirmed the product at the discovery step: capture the three fields there and do not repeat it.
 
-Reproduce a title exactly as the connector returned it, and take the publication year from what the connector returns alongside it. Accept any IDC-owned domain. Use only links the connector returned this session, and never construct, guess or recall one.
+A research document carries its fields in the search result that surfaced it: `title`, `document_number`, `published_date` and `document_url`. Capture all four there, because retrieving the document's full body returns content without any of them. Never rebuild a title from a document's body, and never read a document number off a cover page or a chunk when the search result carries one.
+
+Reproduce a title or product name exactly as the connector returned it. Accept any IDC-owned domain. Use only links the connector returned this session, and never construct, guess or recall one.
 
 ## Precedence: data outranks documents
 
-For any share, size or growth figure, the data product is the authoritative source over a research document covering the same scope (Rule 8). Where a figure rests on research documents rather than data, apply the research hierarchy in Rules 5 and 6: full research outranks non-research, and a higher-authority document such as a MarketScape takes precedence over a lesser one such as a Market Note.
+For any share, size or growth figure, the data product is the authoritative source over a research document covering the same scope (Rule 8). Where a figure rests on research documents rather than data, apply the hierarchy as the rules actually state it: Rule 5's hard floor puts full research above blogs, abstracts, press releases and marketing material; Rule 6 relevancy-weights framework documents; and Rule 7 decides the axis — a quantity ranks by recency, a judgment ranks by the document that most directly addresses the question rather than the newest one. There is no general ladder by document series, so do not rank a MarketScape above a Market Note on series alone; rank on the axis the claim sits on.
